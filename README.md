@@ -1,3 +1,7 @@
 # react-native-trending-anime
-project UAS aplikasi informasi anime yang trending dengan mengunakan android dengan react native
+project UAS aplikasi android informasi anime yang trending dengan mengunakan react native
 
+Kelompok D
+1. dedy irawan
+2. adi santoso
+3. epa astriya
