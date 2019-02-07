@@ -7,21 +7,22 @@ class AnimeList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            refreshing: false,
+            refreshing: true,
             animes: []
         };
     }
 
     _onRefresh = () => {
         this.setState({ refreshing: true });
-        this.componentWillMount()
-        this.setState({ refreshing: false })
-
+        this.componentWillMount();
     }
 
     componentWillMount = () => {
         axios.get('https://api.jikan.moe/v3/top/anime/1/airing')
-            .then(response => this.setState({ animes: response.data.top }));
+            .then(response => this.setState({ 
+                animes: response.data.top,
+                refreshing: false
+            }));
     }
 
     renderAnime() {
